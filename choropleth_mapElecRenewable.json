@@ -5,7 +5,6 @@
     "fontSize":25},
     "width": 800,
     "height": 500,
-    "autosize":"fit",
     "background":"#fcfaf2",
     "data": {
       "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/global.topojson",
