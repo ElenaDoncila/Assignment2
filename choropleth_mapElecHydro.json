@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text":"Global Use of Electricty Sourced from Hydro Electric Plants",
+  "color":"#601A4A",
+  "fontSize":25},
+  "width": 800,
+  "height": 500,
+  "autosize":"fit",
+  "background":"#fcfaf2",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/global.topojson",
+    "format": {"type": "topojson", "feature": "global.geo"}
+  },
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.name",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/Country_data.csv"
+            },
+            "key": "CountryName",
+            "fields": ["Electricity-fromhydroelectricplants"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Electricity-fromhydroelectricplants",
+          "title":"Percent of Total Electricity",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [25, 50, 75],
+            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+          }
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Country"},
+          {"field": "Electricity-fromhydroelectricplants", "type": "quantitative","title":"Percent of Total Electricity Generated"}
+        ]
+      }
+    }
+  ]
+}

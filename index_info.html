@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="style.css" media="all">
+
+
+</head>
+<body>
+
+ <div class="page">
+
+   <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>WOLRD USAGE OF ELECTRICITY FROM FOSSIL FUEL AND CARBON DIOXIDE EMISSIONS AS A RESULT OF ELECTRICY CONSUMPTION</h1>
+        <p>Below are two visualisations which show the global usage of electricity sourced from fossil fuels and the relationship between GDP and tonnes of carbon dioxide emissions as a result of electricity consumption.</p>
+      </div>
+    </div>
+  <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div class="description description-left">
+            <h2>Fossil Fuels</h2>
+            <p>Fossil fuels include coal, petroleum, natural gas, oil shales, bitumens, tar sands and heavy oils. Fossil fuel power plants burn fossil fuel materials in order to create heat which is in turns used to generate steam which drives turbines generating electricity. </p>
+          </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis1"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+        </div>
+      
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div class="description description-left">
+          <h2>Carbon Dioxide Emissions and GDP</h2>
+          <p>Is there a relationship between Carbon Dioxide Emissions from electricity consumption and the GDP of a country? Use the interactive Continent and Population Selectors to view how this relationship trends for different regions of the world and different populations. </p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis2"  class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+      </div>
+    
+  </div>
+  <!-- end pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+
+        <p>This visualisation is created by Elena Doncila using resources from <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The datasource is <a href="#"" target="_blank">some data repository online</href>.</p>
+      </div>
+    </div>
+  
+
+  </div> <!-- end page -->
+   
+<script type="text/javascript">
+  var specVis1 = "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecFossil.json";
+  var specVis2= "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecHydro.json";
+  var specVis3= "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecNuclear.json";
+  var specVis4 = "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecRenewable.json";
+  var specVis5 = "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/scatterplotInduProdRate_ElecRenewable.json";  
+
+  vegaEmbed('#vis1', specVis1, {"actions": false});
+  
+   vegaEmbed('#vis2', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>

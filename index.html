@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>Global Electricity - Elena Doncila</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Typefaces-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Slab:wght@200&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+        <!--century-gothic-->
+    <link href="http://fonts.cdnfonts.com/css/century-gothic" rel="stylesheet">
+        <!--georgia-pro-cond-->
+    <link href="http://fonts.cdnfonts.com/css/georgia-pro-cond" rel="stylesheet">
+        <!--Spectral-->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,200;1,300&display=swap" rel="stylesheet">
+
+    <link href="http://fonts.cdnfonts.com/css/aurulent-sans" rel="stylesheet">
+        <!--Aurulent Sans -->
+    <!-- Typefaces-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="vega_lite_vis.js"></script>
+</head>
+
+<body>
+    <article class="page sans">
+        <header>
+            <h1 class="page-title">GLOBAL ELECTRICITY - IN 2019</h1>
+            <h3 class="article-subtitle">Global annual electricity consumption is approximately 23,398 billion kilowatt hours. This is the story of what powers our world.</h3>
+
+
+
+        </header>
+        <div class="page-body" class="column">
+            <h2 class="collection-title">Introduction</h2>
+
+            <div class="column-list">
+                <p class="bodytext"> <strong><i>Electricity Sources</i> </strong></p>
+            </div>
+            <p class="bodytext">Electricity is one of the most powerful forces in our lives. The fundamental principles of electricity generation were discovered during the 1820's by Michael Faraday. Since then the use of electricity to power appliances and technology has become ubiquitous. Electricity is used for heating, cooling, refrigiration, appliances, computers, electronics, machinery, manufacturing and public transportation systems among many others. The generation of sufficient amounts of electricity is therefore, of national and global concern.  </p>
+            <p class="bodytext">Over the past century, the <strong>main energy sources for generating electricity have been fossil fuels, hydroelectricity, and nuclear energy</strong>. Over the last few decades, the strong growth of renewable sources have shifted attention to the concern of pollution which arises as a result of electricity generation. Despite concern over carbon dioxide emissions due to electricity consumption and generation, fossil fuels continue to remain dominant. <strong>In 2019, fossil fuels generated 64.5% of the worldwide electricity.</strong></p>
+            </p>
+            <p class="bodytext">The following visualisation explores elextricity in a global context.</p>
+
+            <hr/>
+            <h2 class="collection-title">Electricity Sourced From Fossil Fuels</h2>
+            
+            <h3 class="quote_text"> “Present annual world consumption is about equal to the annihilation energy of 4 tons of matter” - Barney Oliver</h3>
+    
+            <p class="bodytext"><strong>Fossil fuels include coal, petroleum, natural gas, oil shales, bitumens, tar sands and heavy oils.</strong> Fossil fuel power plants, burn fossil fuel materials in order to create heat which is in turns used to generate steam which drives turbines generating electricity.</p>
+            <div style="width:20%" class="column-list">
+                <p >The adjacent choropleth map indicates the global use electricity sourced from fossil fuels.</p>
+                <div id="vis1"  class="vis-container"></div>
+            </div>
+            
+            <p class="bodytext">In terms of income, you can view the size of points that are of similar sizes; which means that the income has not changed much across the years. However, the points in 1967, 1995, 2004, 2016, and 2021 are relatively small. It is easy to guess what big events triggered this event, like COVID-19.</p>
+            <hr />
+            <h2 class="collection-title">Trade</h2>
+            <div id="49acbeeb-623b-4da4-a1b3-a43532ca91f9" class="column-list">
+                <div style="width:30%" class="column">
+                    <p id="trade" class="">!! graph 2</p>
+                </div>
+                <div id="fd8fbe10-1690-41aa-a35f-20055218886a" style="width:45%" class="column">
+                    <h3 class="quote_text">“That foreign trade should be fair rather than free.” — Lyn Nofziger</h3>
+                    <p class="bodytext">For many years, countries strives to make a balance of trade, so as to maintain the relative strength of its economy. <i>A country that imports more goods and services than it exports in terms of value has a trade deficit  while a country that exports more goods and services than it imports has a trade surplus.</i> In 2019, <strong><font color="#F1B420" size="4">Germany</font></strong> had <strong>the largest trade surplus</strong> <strong><font color="#F1B420" size="3">(5.8%)</font></strong> followed by <strong><font color="#483D8B" size="4">China</font></strong> <strong><font color="#483D8B" size="3">(1.2%)</font></strong> and <strong><font color="#CAA88C" size="4">Japan</font></strong><strong><font color="#CAA88C" size="3">(0.2%)</font></strong>. Whereas the <strong><font color="#8B4513" size="4">U.S</font></strong> had <strong>the largest trade deficit</strong>, even with the ongoing trade war with China, beating out the <strong><font color="#E151AF" size="4">U.K</font></strong>.
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <h2 class="collection-title">Impact of Sector to GDP </h2>
+            <div class="">
+                <div class="">
+                    <p id="sector_gdp" class="centre_layout">!! graph 3</p>
+                </div>
+
+            <div style="width:102% ; height: auto;" class="column">
+                <h3 class="quote_text">“Globalisation cannot be holded off or turned off: it is the economic equivalent of a force of nature – like wind.” 
+                    - William J. Clinton</h3>
+                    <h2 > Which certain sector has higher dependency ?  </h2>
+                    <p class="bodytext_3_column">In a nutshell, GDP is the entire market value of all goods and services a country produces within a certain amount of time. The charts illustrates the change of the contribution across the three sectors. Interestingly,<strong> the top <font size="4">5</font> economies do not rely on the agriculture as most of them weights less than 15%.</strong> Maybe it is because the foods can be imported from other countries. Across the years, the most important drives come from the sector of service, <i>with more than 40%</i>. 
+                       
+                        Speaking of <strong><font color="#483D8B" size="4">China</font></strong> — the <strong>highest-growth</strong> country, the contribution from the sectors of agriculture and industrial have been receding meanwhile the service sector rise rapidly. We can tell that <strong><font color="#483D8B" size="4">China</font></strong> is going through a economic transformation. A question in my mind is that since the contribution of agriculture has been decreasing dramatically, do you think <strong><font color="#483D8B" size="4">China</font></strong> can support themselves without any imported foods? 
+                </p>
+            </div>
+
+
+            <hr />
+            <h2 class="collection-title">Fertility and Longevity </h2>
+            <div id="27ff43aa-1f24-40a7-973c-746adbd1c6e2" class="column-list">
+                <div style="width:50%" class="column">
+                    <p id="pop_fert_life" class="">!! graph </p>
+                </div>
+            </div>
+            <div style="width:100%" class="column">
+                <h3 class="quote_text">“Our demographic dividend is our strength. The youth have what it takes to engage with the latest technology.”
+                    - Narendra Modi </h3>
+                <p class="bodytext"><strong><font color="#444444" size="4">How do you use this chart?</font></strong>
+                </p>
+                <p class="bodytext">You can move the pan of the scatterplot to view the points in details. Move around the Year bar to view its correlation by year. And select the country in the legend to highlight those points belonging to those regions</p>
+                <p class="bodytext"><strong><font color="#444444" size="4">Why do we take account of fertility and longevity into an economy?</font></strong>
+                </p>
+                <p class="bodytext">Good question! Let me introduce you a term called <font size="4"><i>Demographic Dividend.</i></font></p>
+                <p class="bodytext">It means the economic growth brought on by a change in the structure of a country’s population, usually a result of a fall in fertility and mortality rates. If the population is large enough <strong><font color="#483D8B" size="3">(≥ 100M)</font></strong> like <strong><font color="#483D8B" size="4">China</font></strong>, and people are leading a long lifespan, it means that its working condition is satisfactory enough to increase the productivity. This is important as it boosts per capita income. To measure the Demographic dividends, you can also look at the savings, labor supply, human capital, and economic growth of the countries.
+                </p>
+            </div>
+
+            <hr />
+            <h2 class="collection-title">Foreign Investment</h2>                    
+            <div class="column-list">
+                <div style="width:50%" class="column">
+                    <div>&nbsp</div>
+                    <p id="investment" class="column-list">!! graph 3</p>
+                </div>
+                <div style="width:50%" class="column">
+                    <h3 class="quote_text">“Do not put all eggs in one basket.” - Warren Buffet
+                    </h3>
+                    <p class="bodytext">Foreign investment refers to the investment in domestic companies and assets of another country by a foreign investor. They can be made by individuals, but are most often endeavors pursued by companies and corporations with substantial assets looking to expand their reach. <i>
+                        
+                        A simple sense is that a high inflow from country means that the country has a high potential growth.</i> So, if you move around the year bar below the chart, you can perceive that the inflow is always larger than the outflow, meanwhile Japan always goes conversely. Perhaps we can say that as globalization increases, many multinational corporations will seek new opportunities for economic growth by opening branches and expanding their investments in countries like China.</p>
+                </div>
+            </div>
+            <hr />
+         
+            <h2 class="collection-title">Human Development Index (HDI)</h2>
+            <div id="0093a59a-cc33-41a1-a759-f47b93e9a490" class="column-list">
+                <div style="width:50%" class="column">
+                    <p id="HDI_map" class="centre_layout">!! graph </p>
+                </div>
+
+            </div>
+
+            <div style="width:100%" class="column">
+                <h3 class="quote_text">“Economic growth without investment in human development is unsustainable – and unethical.” - Amartya Sen </h3>
+                <p class="bodytext_2_column">The Human Development Index (HDI) is a statistical tool used to measure a country's overall achievement in its social and economic dimensions. The social and economic dimensions of a country are based on the health of people, their level of education attainment and their standard of living. The map here shows that most of the countries in Asia and South America are having the values <strong>around 70%</strong> ; and countries in Africa have the values <strong>below around 60%</strong>; and countries in Europe, Canada, Australia and the U.S are of high development with valued <strong>roughly 90%</strong>. Therefore, we can infer that countries in Africa have the lowest standard of living with a relatively poor health of people; meanwhile countries like the U.S result conversely.
+                </p>
+            </div>
+            <hr />
+
+            <h2 class="collection-title">Limitation to this analysis</h2>
+                <ol style="width:100%" class="bodytext">
+                    <li>The based year is affected by the datasets. So, originally the default year is set to 2005.</li>
+                    <li>Some data is unavailble.</li>
+                    <li>The limitation of Vega-Lite.</li>
+                </ol> 
+            <hr />
+            <h2 class="collection-title">Conclusion</h2>
+            <div style="width:100%" class="column">
+                <h3 class="quote_text">“It is not by augmenting the capital of the country, but by rendering a greater part of that capital active and productive than would otherwise be so, that the most judicious operations of banking can increase the industry of the country.” &emsp;&nbsp;&emsp;&emsp;&emsp;&emsp; - Adam Smith </h3>
+                <p class="bodytext">
+                    There we easily reach the end of the analysis. We conclude that even though the economic cycles occurred, the economy around the globe has boomed in the long term. For the decades, the HDI has improved; the population keeps growing; life expectancy is prolonging; the foreign investment's official flow are maintained healthily; income and inflation have been increasing. Amazingly, these information are presented in data visualization using Vega-Lite at ease.                </p>
+                <p class="bodytext">
+                    Economics is much more complicated than this, but simpler than you thought. I hope you can trying tweaking around the dull numbers into some beautiful graphs, and eventually find insights.
+                
+                
+                </p>
+            </div>
+    </article>
+
+    <script type="text/javascript">
+        var specVis1 = "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecFossil.json";
+        var specVis2= "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecHydro.json";
+        var specVis3= "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecNuclear.json";
+        var specVis4 = "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/choropleth_mapElecRenewable.json";
+        var specVis5 = "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/scatterplotInduProdRate_ElecRenewable.json";  
+      
+        vegaEmbed('#vis1', specVis1, {"actions": false});
+        
+         vegaEmbed('#vis2', specVis5, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      
+        vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      
+        vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      </script>
+</body>
+
+</html>

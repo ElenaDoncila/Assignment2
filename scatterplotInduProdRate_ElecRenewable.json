@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":{"text": "Tonnes of Carbon Dioxide Emissions from Electricity Consumption vs GDP Per Capita - 2019",
+  "color":"#601A4A",
+  "fontSize":25},
+  "width": 800,
+  "height": 500,
+  "autosize":"fit",
+  "background":"#fcfaf2",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/Country_data.csv"
+  },
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
+    },
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.GDP > 0"},
+    {"filter": "datum.Carbondioxideemissionsfromconsumptionofenergy>10000"},
+    {"filter": "datum.Population > Population_Above"},
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Carbondioxideemissionsfromconsumptionofenergy",
+      "type": "quantitative",
+      "title": "Tonnes of Carbon Dioxide Emissions",
+      "axis": {"tickCount": 5},
+      "scale": {"type":"log","domain": [10000,15000000000]}
+    },
+    "y": {
+      "field": "GDP",
+      "type": "quantitative",
+      "title": "GDP - per capita",
+      "axis": {"tickCount": 5},
+      "scale": {"type":"log","domain": [1,1400000]}
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
+        },
+        "tooltip":[
+              {"field":"CountryName","type":"nominal"},
+              {"field":"Carbondioxideemissionsfromconsumptionofenergy","type": "quantitative", "format":","},
+              {"field":"GDP","type": "quantitative","format":","}
+            ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "CountryName", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Australia' || datum['CountryName'] == 'United Kingdom' || datum['CountryName'] == 'Russia' || datum['CountryName'] == 'India' || datum['CountryName'] == 'Brazil' ||  datum['CountryName'] == 'United States'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip":[
+    {"field":"CountryName","type":"nominal"},
+    {"field":"Carbondioxideemissionsfromconsumptionofenergy","type": "quantitative", "format":","},
+    {"field":"GDP","type": "quantitative","format":","}
+  ]
+      }
+    }
+  ]
+}
