@@ -1,12 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global Use of Electricty Sourced from Fossil Fuels",
-  "width": 500,
-  "height": 400,
+  "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
+  "color":"#601A4A",
+  "fontSize":25},
+  "width": 800,
+  "height": 500,
   "autosize":"fit",
-  "background":"#f9f4ec",
+  "background":"#fcfaf2",
   "data": {
-    "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/global.topojson",
+    "url": "https://raw.githubusercontent.com/stingyblingy/Week9Homework/main/global.topojson",
     "format": {"type": "topojson", "feature": "global.geo"}
   },
   "projection": {"type": "equalEarth"},
@@ -18,7 +20,7 @@
           "as": "note"
         }
       ],
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "black","strokeWidth":1},
       "encoding": {"tooltip": {"field": "note"}}
     },
     {
@@ -27,28 +29,32 @@
           "lookup": "properties.name",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/Country_data.csv"
+              "url": "https://raw.githubusercontent.com/stingyblingy/Week9Homework/main/Country_data.csv"
             },
             "key": "CountryName",
             "fields": ["Electricity-fromfossilfuels"]
           }
         }
       ],
-      "mark": {"type": "geoshape", "stroke": "white"},
+      "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "black","strokeWidth":1},
       "encoding": {
         "color": {
           "field": "Electricity-fromfossilfuels",
-          "title":"Percent of Total Electricity",
+          "title": "% of total generated",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
             "domain": [25, 50, 75],
-            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+            "range": ["#ffffcc", "#a1dab4", "#41b6c4", "#225ea8"]
           }
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "Country"},
-          {"field": "Electricity-fromfossilfuels", "type": "quantitative","title":"Percent of Total Electricity Generated"}
+          {
+            "field": "Electricity-fromfossilfuels",
+            "type": "quantitative",
+            "title": "Percent of Total Electricity Generated"
+          }
         ]
       }
     }

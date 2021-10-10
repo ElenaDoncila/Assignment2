@@ -1,10 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Use of Electricty Sourced from Nuclear Fuels",
-    "width": 500,
-    "height": 400,
-    "autosize":"fit",
-    "background":"#f9f4ec",
+    "title": {"text":"Global Use of Electricty Sourced from Nuclear Fuels",
+    "color":"#601A4A",
+  "fontSize":25},
+  "width": 800,
+  "height": 500,
+  "autosize":"fit",
+  "background":"#fcfaf2",
     "data": {
       "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/global.topojson",
       "format": {"type": "topojson", "feature": "global.geo"}
@@ -34,7 +36,7 @@
             }
           }
         ],
-        "mark": {"type": "geoshape", "stroke": "white"},
+        "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "black","strokeWidth":1},
         "encoding": {
           "color": {
             "field": "Electricity-fromnuclearfuels",
@@ -43,7 +45,7 @@
             "scale": {
               "type": "threshold",
               "domain": [25, 50, 75],
-              "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+              "range": ["#ffffcc", "#a1dab4", "#41b6c4", "#225ea8"]
             }
           },
           "tooltip": [
