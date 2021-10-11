@@ -3,8 +3,8 @@
   "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
   "color":"#601A4A",
   "fontSize":25},
-  "width": 800,
-  "height": 500,
+  "width": "container",
+  "height": "container",
   "background":"#fcfaf2",
   "data": {
     "url": "https://raw.githubusercontent.com/stingyblingy/Week9Homework/main/global.topojson",
