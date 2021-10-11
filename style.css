@@ -46,30 +46,23 @@ abbr, acronym
 }
 /*reset.css*/
 
-/* webkit printing magic: print all background colors */
-
-html {
-    -webkit-print-color-adjust: exact;
-}
-
 * {
-    box-sizing: border-box;
-    -webkit-print-color-adjust: exact;
-}
-
-html,
-body {
     margin: 0;
     padding: 0;
 }
 
-@media only screen {
-    body {
-        margin: 2em auto;
-        max-width: 1000px;
-        color: rgb(55, 53, 47);
-    }
+/* webkit printing magic: print all background colors */
+
+
+
+
+body {
+
+    padding: 40px;
+    
 }
+
+
 
 body {
     line-height: 1.5;
@@ -116,7 +109,8 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    margin-top: 1.5rem;
+    padding:5px;
+    background-color: #CCbE9f;
 }
 
 h3 {
@@ -156,13 +150,12 @@ mark {
 }
 
 hr {
-    background: transparent;
-    display: block;
     width: 100%;
-    height: 1px;
+    height: 5px;
     visibility: visible;
-    border: none;
-    border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    border: #382119;
+    color: #382119;
+    border-bottom: 3px solid #382119;
 }
 
 img {
@@ -189,8 +182,13 @@ img {
     justify-content: space-between;
 }
 
+div.rightcolumn {
+    position: absolute;
+    right: 0px;
+}
+
 .column {
-    padding: 0 1em;
+    padding: 20px;
 }
 
 .column:first-child {
@@ -254,8 +252,6 @@ th {
 ol,
 ul {
     margin: 0;
-    margin-block-start: 0.6em;
-    margin-block-end: 0.6em;
 }
 
 li>ol:first-child,
@@ -336,9 +332,9 @@ ol>li {
 
 .collection-title {
     display: inline-block;
-    margin-right: 1em;
     font-weight: 700;
-    color: #222;
+    padding: 10px;
+    color: #382119;
     font-family: Tahoma, sans-serif;
 }
 
@@ -818,24 +814,12 @@ blockquote {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 
-.timestamp {
-    display: flex;
-    justify-content: center;
-    /* align horizontal */
-    align-items: center;
-    /* align vertical */
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    font-size: 12px;
-    font-family: "Space Grotesk", sans-serif;
-    margin: 0;
-}
 
 .bodytext {
     font-family: 'Century Gothic', sans-serif;
     text-align: justify;
     text-justify: inter-word;
+    padding: 10px;
 }
 
 .article-subtitle {
@@ -859,9 +843,9 @@ blockquote {
 
 .quote_text {
     font-family: 'Spectral', serif;
-    color: #F9F4EC;
-    background: #601A4A;
-    border-left: 15px solid #EE442F;
+    color: #382119;
+    background: #CCbE9f;
+    border-left: 15px solid #ABC3C9;
     /*    margin: 1.5em 10px;*/
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
@@ -895,6 +879,9 @@ columns: 300px 3;
 header {
     display: block;
     block-size: 150px;
+}
+.vis-container {
+    width: 100%;
 }
 
 @font-face { font-family: 'Century Gothic', sans-serif;}

@@ -19,7 +19,7 @@
             "as": "note"
           }
         ],
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+        "mark": {"type": "geoshape", "stroke": "white"},
         "encoding": {"tooltip": {"field": "note"}}
       },
       {
