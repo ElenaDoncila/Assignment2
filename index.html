@@ -77,8 +77,8 @@
                     <p class="bodytext">When fossil fuels are burned, they release large amounts of carbon dioxide, a greenhouse gas, into the air. Greenhouse gases trap radiating heat into the atmosphere and overtime cause the temperature of the earth to rise.</p>
                     <p class="bodytext">The adjacent choropleth map indicates the global use electricity sourced from fossil fuels.</p>
                     <p class="bodytext">Please hover over countries in order to see more specific data.</p>
+                    <div id="vis1"  class="vis-container" ></div>
                 </div>
-                <div id="vis1"  class="vis-container"></div>
             </div>
             <p class="bodytext">Globaly, fossil fuel contributes to over <strong>60% of global electricity generation</strong>. This number has significantly dropped from the beginning of the century by around 20%. According to some sources, it is estimated that <strong> oil reserves will run out in 47 years, natural gas in 52 years and coal in 133 years.</strong></p>
           
@@ -129,11 +129,11 @@
     </article>
 
     <script type="text/javascript">
-        var specVis1 = "./choropleth_mapElecFossil.json";
-        var specVis2= "./choropleth_mapElecHydro.json";
-        var specVis3= "./choropleth_mapElecNuclear.json";
-        var specVis4 = "./choropleth_mapElecRenewable.json";
-        var specVis5 = "./scatterplotInduProdRate_ElecRenewable.json";  
+        var specVis1 = "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapElecFossil.json";
+        var specVis2= "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapElecHydro.json";
+        var specVis3= "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapElecNuclear.json";
+        var specVis4 = "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapElecRenewable.json";
+        var specVis5 = "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/scatterplotInduProdRate_ElecRenewable.json";  
       
         vegaEmbed('#vis1', specVis1, {"actions": false});
 
