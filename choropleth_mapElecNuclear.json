@@ -4,7 +4,7 @@
     "color":"#382119",
   "fontSize":25},
   "width": "container",
-  "height": "container",
+  "height": 500,
   "background":"#fcfaf2",
     "data": {
       "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/global.topojson",
@@ -35,7 +35,7 @@
             }
           }
         ],
-        "mark": {"type": "geoshape","stroke": "black","strokeWidth":1},
+        "mark": {"type": "geoshape","stroke": "black","strokeWidth":0.2},
         "encoding": {
           "color": {
             "field": "Electricity-fromnuclearfuels",
