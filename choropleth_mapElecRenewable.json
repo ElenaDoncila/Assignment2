@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text":"Global Use of Electricty Sourced from Renewable Sources",
-    "color":"#601A4A",
+    "color":"#382119",
     "fontSize":25},
-    "width": 800,
-    "height": 500,
+    "width": "container",
+    "height": "container",
     "background":"#fcfaf2",
     "data": {
       "url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/global.topojson",

@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title":{"text": "Tonnes of Carbon Dioxide Emissions from Electricity Consumption vs GDP Per Capita - 2019",
-  "color":"#601A4A",
+  "color":"#382119",
   "fontSize":25},
-  "width": 800,
-  "height": 500,
+  "width": "container",
+  "height": "container",
   "background":"#fcfaf2",
 
   "data": {
@@ -62,7 +62,7 @@
       "type": "quantitative",
       "title": "Tonnes of Carbon Dioxide Emissions",
       "axis": {"tickCount": 5},
-      "scale": {"type":"log","domain": [10000,15000000000]}
+      "scale": {"type":"log","domain": [1,15000000000]}
     },
     "y": {
       "field": "GDP",

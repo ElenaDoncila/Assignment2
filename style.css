@@ -98,13 +98,12 @@ h3 {
 .page-title {
     font-size: 40px;
     font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 0.75em;
+    padding: 20px;
     font-family: 'Bienetresocial', sans-serif;}
 
 h1 {
     font-size: 1.875rem;
-    margin-top: 1.875rem;
+    color: #382119;
 }
 
 h2 {
@@ -822,9 +821,14 @@ blockquote {
     padding: 10px;
 }
 
+.finaltext {
+    font-family: 'Century Gothic', sans-serif;
+    text-align: center;
+    text-justify: inter-word;
+    padding: 10px;
+}
+
 .article-subtitle {
-    margin-bottom: 0;
-    margin-top: 0;
     font-family: "PT Mono";
     font-size: 18px;
     line-height: 1.4;
@@ -878,7 +882,8 @@ columns: 300px 3;
 
 header {
     display: block;
-    block-size: 150px;
+    background-color: #382119;
+    width:100%;
 }
 .vis-container {
     width: 100%;
