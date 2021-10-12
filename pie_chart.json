@@ -22,6 +22,7 @@
     "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {"field": "value", "type": "quantitative"},
-      "color": {"field": "category", "type": "nominal","scale":{"range":["#382119","#ccbe9f","#abc3c9","#9e9cc2","#a17724","#Ae9c45","#decbe3"]}}
+      "color": {"field": "category", "type": "nominal","scale":{"range":["#382119","#ccbe9f","#abc3c9","#9e9cc2","#a17724","#Ae9c45","#decbe3","#6f7498"]}},
+      "order":{"field":"value","type": "quantitative","sort":"ascending"}
     }
   }
