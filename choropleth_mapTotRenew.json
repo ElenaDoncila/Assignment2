@@ -7,7 +7,7 @@
   "width": "container",
     "height": 500,
     "data": {
-      "url": "https://raw.githubusercontent.com/stingyblingy/Week9Homework/main/global.topojson",
+      "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/global.topojson",
       "format": {"type": "topojson", "feature": "global.geo"}
     },
     "projection": {"type": "equalEarth"},

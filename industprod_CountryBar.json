@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A bar chart with negative values. We can hide the axis domain line, and instead use a conditional grid color to draw a zero baseline.",
-  "data": {"url": "https://raw.githubusercontent.com/stingyblingy/Week9Homework/main/Country_data.csv"
+  "data": {"url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
   },
   "title":{ "text":"Industrial Production Growth Rate",
   "color":"#382119",

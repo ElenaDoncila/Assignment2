@@ -1,76 +1,151 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bar chart with negative values. We can hide the axis domain line, and instead use a conditional grid color to draw a zero baseline.",
-    "data": {"url": "https://raw.githubusercontent.com/stingyblingy/Week9Homework/main/Country_data.csv"
-    },
-    "title":{ "text":"Population, GDP and Carbon Dioxide Emission ",
-    "color":"#382119",
-    "fontSize": 15},
+  "width": 600,
+  "height": "container",
+  "title": {"text":"GDP, Population and CO2 Emissions",
+  "color":"#382119",
+  "fontSize":15},
     "background":"#fcfaf2",
-        "params": [
-        {
-          "name": "Continent_selection",
-          "bind": {
-            "input": "select",
-            "options": [
-              null,
-              "North America",
-              "South America",
-              "Europe",
-              "Africa",
-              "Asia",
-              "Oceania"
-            ],
-            "labels": [
-              "Show All",
-              "North America",
-              "South America",
-              "Europe",
-              "Africa",
-              "Asia",
-              "Oceania"
-            ],
-            "name": "Continent Selection: "
-          }
-        }
-      ],
-            "transform": [
-        {
-          "filter": "datum.Continent == Continent_selection || Continent_selection ==null"
-        }
-      ],
-  "encoding": {
-    "y": {
-      "field": "CountryName",
-      "type": "nominal",
-      "axis": {
-        "domain": false,
-        "ticks": false,
-        "labelAngle": 0,
-        "labelPadding": 4
+  "data": {
+    "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
+  },
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
       }
     },
-    "x": {
-      "field": "Industrialproductiongrowthrate",
-      "type": "quantitative",
-      "scale": {"padding": 20},
-      "axis": {
-        "gridColor": {
-          "condition": {"test": "datum.value === 0", "value": "black"},
-          "value": "#ddd"
-        }
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
       }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Population > Population_Above"},
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Emission-perperson",
+      "type": "quantitative",
+      "title": "Tonnes of Carbon Dioxide Emissions Per Person",
+      "scale": {"type":"linear", "domain":[0,60]}
+    },
+    "y": {
+      "field": "GDP",
+      "type": "quantitative",
+      "title": "GDP - per capita",
+      "scale": {"type":"linear","domain": [1,140000]}
     }
   },
   "layer": [
-    {"mark": "bar"},
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
+        },
+        "tooltip":[
+              {"field":"CountryName","type":"nominal"},
+              {"field":"Emission-perperson","type": "quantitative", "format":","},
+              {"field":"GDP","type": "quantitative","format":","}
+            ]
+      }
+    },
     {
       "mark": {
         "type": "text",
-        "align": {"expr": "datum.Industrialproductiongrowthrate < 0 ? 'right' : 'left'"},
-        "dx": {"expr": "datum.Industrialproductiongrowthrate < 0 ? -2 : 2"}
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
       },
-      "encoding": {"text": {"field": "Industrialproductiongrowthrate", "type": "quantitative"}}
+      "encoding": {
+        "text": {"field": "CountryName", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Australia' || datum['CountryName'] == 'United Kingdom' || datum['CountryName'] == 'Russia' || datum['CountryName'] == 'India' || datum['CountryName'] == 'Brazil' ||  datum['CountryName'] == 'United States'||  datum['CountryName'] == 'South Africa'||  datum['CountryName'] == 'Chile'||  datum['CountryName'] == 'Qatar'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip":[
+    {"field":"CountryName","type":"nominal"},
+    {"field":"Emission-perperson","type": "quantitative", "format":","},
+    {"field":"GDP","type": "quantitative","format":","}
+  ]
+      }
     }
   ]
 }
