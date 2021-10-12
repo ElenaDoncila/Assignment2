@@ -70,8 +70,7 @@
             <p class="bodytext">The following visualisation explores elextricity in a global context for the year 2019.</p>
 
             <hr>
-            <button class="accordion"><h2 class="collection-title">Fossil Fuels</h2></button>
-            <div class ="panel">
+                <h3 class="collection-title">Fossil Fuels</h3>
                 <div class="column-list">
                 <div style="width:30%" class="column">
                     <h3 class="quote_text"> “Present annual world consumption is about equal to the annihilation energy of 4 tons of matter” - Barney Oliver</h3>
@@ -87,8 +86,7 @@
             
 
             <hr >
-            <button class ="accordion" ><h2 class="collection-title">Hydropower</h2></button>
-            <div class ="panel">
+            <h3 class="collection-title">Hydropower</h3>
                 <div class="column-list">
                     <div id="vis2"  class="column" style="width:70%"></div>
                     <div style="width:30%" class="column">
@@ -98,15 +96,13 @@
                     </p>
                     <p class="bodytext">Please hover over countries in order to see more specific data.</p>
                 </div>
-            </div>
         </div>
         <p class="finaltext">Hydropower is clean and renewable and certain designs are able to meet peak demand. It relies heavily on local hydrology and geography and is not always a viable implementation. According to some sources, it is estimated that <strong> hydropower can reduce cummulative greenhouse gas emissions by 5.6 gigatonnes.</strong></p>
 
 
 
         <hr>
-        <button class="accordion"><h2 class="collection-title">Nuclear Power</h2></button>
-        <div class ="panel">
+        <h3 class="collection-title">Nuclear Power</h3>
             <div class ="column-list">
             <div style="width:30%" class="column">
                 <h3 class="quote_text">"All the waste in a year from a nuclear power plant can be stored under a desk." - Ronald Reagan</h3>
@@ -117,13 +113,11 @@
             </div>
             <div id="vis3"  class="column" style="width:70%"></div>
         </div>
-        </div>
         <p class="finaltext">Nuclear power plants <strong>do not emit precursors to acid rain, nor gases which contribute to global warming</strong> such as carbon dioxide. Despite all the benefits of nuclear power,<strong> it only provides about 10% of the world's electricity needs</strong> from about 445 power reactors.</p>
 
 
         <hr>
-        <button class="accordion"><h2 class="collection-title">Renewable Sources</h2></button>
-        <div class ="panel">
+        <h3 class="collection-title">Renewable Sources</h3>
             <div class="column-list">
             <div id="vis4"  class="column" style="width:70%"></div>
             <div style="width:30%" class="column">
@@ -134,7 +128,6 @@
                 <p class="bodytext">Please hover over countries in order to see more specific data.</p>
                 <p class="bodytext">The environmental benefit of using renewable energy sources is offset by the difficulties encountered in establishing reliable power generation. Solar panles and wind turbines can have a large land footprint and can impact the environment significantly. Biomass power is abundant but requires a lot of energy to produce and can result in air pollution.</p>
             </div>
-        </div>
         </div>
         <p class="finaltext">Renewable sources are a focus of intense research and are expected to become more prominent and efficient within the coming decades. The impact of renewable energies is not only predicted to protect the environment but will also be comparatively cheaper.<strong>Almost a billion people worldwide live without a reliable source of electricity and renewable sources look set to change this</strong> .</p>
         
@@ -151,7 +144,22 @@
             </div>
         </div>
         <p class="finaltext">Renewable sources are a focus of intense research and are expected to become more prominent and efficient within the coming decades. The impact of renewable energies is not only predicted to protect the environment but will also be comparatively cheaper.<strong>Almost a billion people worldwide live without a reliable source of electricity and renewable sources look set to change this</strong> .</p>
+         
+        <hr>
+            <div class="column-list">
+            <div id="vis6"  class="column" style="width:70%"></div>
+            <div style="width:30%" class="column">
+                <h3 class="quote_text">"The future is green energy, sustainability and renewable energy." - Arnold Schwarzenegger</h3>
+                <p class="bodytext">Renewable energy sources are naturally replenishing and virtually inexhastible in duration. They are however limited in the amount of energy that is available per unit of time and can be severely flow limited.
+                    The major types of renewable energy sources are biomass, geothermal, wind and solar. Hydropower is also a renewable source but is not presented here.
+                </p>
+                <p class="bodytext">Please hover over countries in order to see more specific data.</p>
+                <p class="bodytext">The environmental benefit of using renewable energy sources is offset by the difficulties encountered in establishing reliable power generation. Solar panles and wind turbines can have a large land footprint and can impact the environment significantly. Biomass power is abundant but requires a lot of energy to produce and can result in air pollution.</p>
+            </div>
+        </div>
+        <p class="finaltext">Renewable sources are a focus of intense research and are expected to become more prominent and efficient within the coming decades. The impact of renewable energies is not only predicted to protect the environment but will also be comparatively cheaper.<strong>Almost a billion people worldwide live without a reliable source of electricity and renewable sources look set to change this</strong> .</p>
                 
+            
     
     </article>
 
@@ -161,6 +169,10 @@
         var specVis3= "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapElecNuclear.json";
         var specVis4 = "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapElecRenewable.json";
         var specVis5 = "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/scatterplotInduProdRate_ElecRenewable.json";  
+        var specVis6 = "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapEmission.json";
+        var specVis7 ="https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/choropleth_mapTotRenew.json";
+        var specVis8 ="https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/stackedBar.json";
+        var specVis9 ="https://github.com/ElenaDoncila/Assignment2/blob/main/industprod_CountryBar.json";
       
         vegaEmbed('#vis1', specVis1, {"actions": false});
 
@@ -171,6 +183,14 @@
         vegaEmbed('#vis4', specVis4, {"actions": false});
 
         vegaEmbed('#vis5', specVis5, {"actions": false});
+
+        vegaEmbed('#vis6', specVis6, {"actions": false});
+
+        vegaEmbed('#vis7', specVis7, {"actions": false});
+
+        vegaEmbed('#vis8', specVis8, {"actions": false});
+
+        vegaEmbed('#vis9', specVis9, {"actions": false});
         
          vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -191,6 +211,23 @@
         vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+
+        vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis7', specVis7, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis8', specVis8, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis9', specVis9, {"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
       </script>
 
 <script>
