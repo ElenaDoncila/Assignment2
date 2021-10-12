@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple donut chart with embedded data.",
+    "data": {
+      "values": [
+        {"category": "Rest of the World", "value": 15178858595 },
+        {"category": "Canada", "value": 640600000},
+        {"category": "China", "value": 11670000000},
+        {"category": "Greenland", "value": 847600000},
+        {"category": "Japan", "value": 1268000000},
+        {"category": "Russia", "value":1847000000},
+        {"category": "South Africa", "value": 572300000},
+        {"category": "United States", "value": 5242000000}
+      ]
+    },
+    "title":{ "text":"CO2 Emission Contribution",
+    "color":"#382119",
+    "fontSize": 15},
+    "height":"container",
+    "width":"container",
+    "background":"#fcfaf2",
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "value", "type": "quantitative"},
+      "color": {"field": "category", "type": "nominal","scale":{"range":["#382119","#ccbe9f","#abc3c9","#9e9cc2","#a17724","#Ae9c45","#decbe3"]}}
+    }
+  }
