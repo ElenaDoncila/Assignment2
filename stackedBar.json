@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/ElenaDoncila/Week10Homework/main/Country_data.csv"},
+      "title":{ "text":"Electricity Sources",
+  "color":"#382119",
+  "fontSize": 15},
+  "height":"container",
+  "width":"container",
+  "background":"#fcfaf2",
+        "transform": [{
+                "filter": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Russia'  || datum['CountryName'] == 'Canada' || datum['CountryName'] == 'Japan' ||  datum['CountryName'] == 'United States'||  datum['CountryName'] == 'Germany'||  datum['CountryName'] == 'Saudi Arabia' || datum['CountryName'] == 'Greenland'"
+            }
+        ],
+    "repeat": {
+        "layer": ["Electricity-fromfossilfuels", "Electricity-fromnuclearfuels","Electricity-fromhydroelectricplants","Electricity-fromotherrenewablesources"]
+    },
+    "spec": {
+        "mark": "bar",
+        "encoding": {
+            "x": { "field": { "repeat": "layer" }, "type": "quantitative"},
+            "y": { "field": "CountryName", "type": "nominal" },
+            "color": {"datum": { "repeat": "layer" }, "type": "nominal",
+            "scale":{
+                "domain": ["Electricity-fromfossilfuels", "Electricity-fromnuclearfuels","Electricity-fromhydroelectricplants","Electricity-fromotherrenewablesources"],
+                "range":["#c9bd9e","#abc39c","#8b7f47","#382119"]
+            }}
+        }
+    }
+}

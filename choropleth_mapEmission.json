@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
-    "color":"#601A4A",
-    "fontSize":25},
+    "title": {"text":"Global Emission of CO2 - Tons per Person",
+    "color":"#382119",
+    "fontSize":15},
     "width": "container",
     "height": 500,
     "background":"#fcfaf2",

@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text":"Global Use of Electricty Sourced from Renewable Sources",
     "color":"#382119",
-    "fontSize":25},
+    "fontSize":15},
     "width": "container",
     "height": 500,
     "background":"#fcfaf2",
