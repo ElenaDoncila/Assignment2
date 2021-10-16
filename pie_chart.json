@@ -14,11 +14,11 @@
       ]
     },
     "title":{ "text":"CO2 Emission Contribution",
-    "color":"#382119",
-    "fontSize": 15},
+    "color":"#092215",
+    "fontSize": 18},
     "height":"container",
     "width":"container",
-    "background":"#fcfaf2",
+    "background":"#e8f4ea",
     "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {"field": "value", "type": "quantitative"},

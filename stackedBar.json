@@ -2,11 +2,11 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"},
       "title":{ "text":"Electricity Sources",
-  "color":"#382119",
-  "fontSize": 15},
+  "color":"#092215",
+  "fontSize": 18},
   "height":"container",
   "width":"container",
-  "background":"#fcfaf2",
+  "background":"#e8f4ea",
         "transform": [{
                 "filter": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Russia'  || datum['CountryName'] == 'Canada' || datum['CountryName'] == 'Japan' ||  datum['CountryName'] == 'United States'||  datum['CountryName'] == 'Germany'||  datum['CountryName'] == 'Saudi Arabia' || datum['CountryName'] == 'Greenland'"
             }

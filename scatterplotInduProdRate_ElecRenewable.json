@@ -3,9 +3,9 @@
   "width": 600,
   "height": "container",
   "title": {"text":"GDP, Population and CO2 Emissions",
-  "color":"#382119",
-  "fontSize":15},
-    "background":"#fcfaf2",
+  "color":"#092215",
+  "fontSize":18},
+    "background":"#e8f4ea",
   "data": {
     "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
   },
