@@ -22,8 +22,7 @@
       "field":"Sourced",
       "title":"Percent Sourced",
       "type": "quantitative",
-      "sort":"ascending",
-      "axis":null
+      "sort":"ascending"
     },
     "color": {
       "field": "Energy",
