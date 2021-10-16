@@ -1,5 +1,5 @@
 {
-  "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+  "config": {"legend": {"columns":2,"orient": "bottom","layout":{"bottom":{"anchor":"middle"}}},
   "view": {
      "stroke": "transparent"
   }},
@@ -7,14 +7,14 @@
     "description": "A simple donut chart with embedded data.",
     "data": {
       "values": [
-        {"category": "Rest of the World", "value": 15178858595 },
-        {"category": "Canada", "value": 640600000},
-        {"category": "China", "value": 11670000000},
-        {"category": "Greenland", "value": 847600000},
-        {"category": "Japan", "value": 1268000000},
-        {"category": "Russia", "value":1847000000},
-        {"category": "South Africa", "value": 572300000},
-        {"category": "United States", "value": 5242000000}
+        {"category": "Rest of the World", "value": 34.48347187},
+        {"category": "Canada", "value": 1.89289735},
+        {"category": "China", "value": 34.48347187},
+        {"category": "Greenland", "value": 2.504557905},
+        {"category": "Japan", "value": 3.74679026},
+        {"category": "Russia", "value":15.8269066},
+        {"category": "Saudi Arabia", "value": 1.941652902},
+        {"category": "United States", "value": 15.48949096}
       ]
     },
     "title":{ "text":"CO2 Emission Contribution",
@@ -27,6 +27,10 @@
     "encoding": {
       "theta": {"field": "value", "type": "quantitative"},
       "color": {"field": "category", "type": "nominal","scale":{"range":["#4477aa","#66ccee","#228833","#ccbb44","#ee6677","#aa3377","#bbbbbb","#332288"]}},
-      "order":{"field":"value","type": "quantitative","sort":"ascending"}
+      "order":{"field":"value","type": "quantitative","sort":"ascending"},
+        "tooltip":[
+    {"field":"category","type":"nominal","title":"Country/Region"},
+    {"field":"value","type": "quantitative", "title":"Contribution to Emission","format":{}}
+  ]
     }
   }

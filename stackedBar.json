@@ -8,7 +8,7 @@
        "title":{ "text":"Electricity Sources",
   "color":"#092215",
   "fontSize": 18},
-    "height":500,
+    "height":250,
   "width":"container",
   "background":"#F5F5F5",
   "mark": "bar",

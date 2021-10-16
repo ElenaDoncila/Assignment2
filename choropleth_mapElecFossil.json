@@ -1,5 +1,5 @@
 {
-  "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+  "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"left"}}},
   "view": {
      "stroke": "transparent"
   }},
@@ -43,7 +43,7 @@
       "encoding": {
         "color": {
           "field": "Electricity-fromfossilfuels",
-          "title": "% of energy from fossil fuels",
+          "title": "Global % of Electricity Sourced From Fossil Fuels",
           "type": "quantitative",
           "scale": {
             "type": "threshold",

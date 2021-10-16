@@ -1,4 +1,4 @@
-{"config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+{"config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"left"}}},
   "view": {
      "stroke": "transparent"
   }},

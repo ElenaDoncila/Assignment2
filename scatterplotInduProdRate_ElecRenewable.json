@@ -62,13 +62,14 @@
       "field": "Emission-perperson",
       "type": "quantitative",
       "title": "Tonnes of Carbon Dioxide Emissions Per Person",
-      "scale": {"type":"linear", "domain":[0,60]}
+      "scale": {"type":"linear", "domain":[0,55]},
+      "axis":{"tickColor":null,"labelFontSize":15} 
     },
     "y": {
       "field": "GDP",
       "type": "quantitative",
       "title": "GDP - per capita",
-      "scale": {"type":"linear","domain": [1,140000]}
+      "scale": {"type":"linear","domain": [1,130000]}
     }
   },
   "layer": [

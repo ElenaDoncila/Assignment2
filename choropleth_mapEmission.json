@@ -1,4 +1,4 @@
-{ "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+{ "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"left"}}},
 "view": {
    "stroke": "transparent"
 }},
@@ -42,7 +42,7 @@
         "encoding": {
           "color": {
             "field": "Emission-perperson",
-            "title": "% of total generated",
+            "title": "Tones Per Person",
             "type": "quantitative",
             "scale": {
               "type": "threshold",
@@ -55,7 +55,7 @@
             {
               "field": "Emission-perperson",
               "type": "quantitative",
-              "title": "Percent of Total Generated"
+              "title": "Tons Per Person"
             }
           ]
         }
