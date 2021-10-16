@@ -1,4 +1,8 @@
 {
+  "config": {
+  "view": {
+     "stroke": "transparent"
+  }},
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
   "color":"#092215",
