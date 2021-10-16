@@ -7,7 +7,7 @@
   "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
   "color":"#092215",
   "fontSize":20},
-  "width": 700,
+  "width": "container",
   "height": 500,
   "background":"#e8f4ea",
   "data": {
@@ -56,7 +56,7 @@
           {
             "field": "Electricity-fromfossilfuels",
             "type": "quantitative",
-            "title": "Percent of Total Electricity"
+            "title": "Percent of Total"
           }
         ]
       }
