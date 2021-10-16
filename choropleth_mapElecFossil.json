@@ -1,13 +1,13 @@
 {
-  "config": {
+  "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
   "view": {
      "stroke": "transparent"
   }},
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
   "color":"#092215",
-  "fontSize":15},
-  "width": "container",
+  "fontSize":20},
+  "width": 700,
   "height": 500,
   "background":"#e8f4ea",
   "data": {
@@ -43,12 +43,12 @@
       "encoding": {
         "color": {
           "field": "Electricity-fromfossilfuels",
-          "title": "% of total generated",
+          "title": "% of energy from fossil fuels",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
             "domain": [25, 50, 75],
-            "range": ["#ffffcc", "#a1dab4", "#41b6c4", "#225ea8"]
+            "range": ["#ff0000", "#a80000", "#600000", "#300000"]
           }
         },
         "tooltip": [
@@ -56,7 +56,7 @@
           {
             "field": "Electricity-fromfossilfuels",
             "type": "quantitative",
-            "title": "Percent of Total Electricity Generated"
+            "title": "Percent of Total Electricity"
           }
         ]
       }
