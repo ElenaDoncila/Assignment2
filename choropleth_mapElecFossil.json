@@ -9,7 +9,7 @@
   "fontSize":20},
   "width": "container",
   "height": 500,
-  "background":"#e8f4ea",
+  "background":"#F5F5F5",
   "data": {
     "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/global.topojson",
     "format": {"type": "topojson", "feature": "global.geo"}

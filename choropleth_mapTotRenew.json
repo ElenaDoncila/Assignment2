@@ -1,9 +1,12 @@
-{
+{"config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+  "view": {
+     "stroke": "transparent"
+  }},
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title":{ "text":"Global Use of Electricty Sourced from Renewable Sources",
    "color":"#092215",
    "fontSize": 18},
-   "background":"#e8f4ea",
+   "background":"#F5F5F5",
   "width": "container",
     "height": 500,
     "data": {
@@ -44,7 +47,7 @@
             "scale": {
               "type": "threshold",
               "domain": [25, 50, 75],
-              "range": ["#ffffcc", "#a1dab4", "#41b6c4", "#225ea8"]
+              "range": ["#D5D170", "#AAB952", "#2D6514", "#012D04"]
             }
           },
           "tooltip": [
@@ -52,7 +55,7 @@
             {
               "field": "TotalRenewableElectricity",
               "type": "quantitative",
-              "title": "Percent of Total Electricity Generated"
+              "title": "Percent of Total Generated"
             }
           ]
         }

@@ -1,4 +1,7 @@
-{
+{"config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+  "view": {
+     "stroke": "transparent"
+  }},
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A bar chart with negative values. We can hide the axis domain line, and instead use a conditional grid color to draw a zero baseline.",
   "data": {"url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
@@ -6,9 +9,9 @@
   "title":{ "text":"Industrial Production Growth Rate",
   "color":"#092215",
   "fontSize": 18},
-  "height":"container",
+  "height":250,
   "width":"container",
-  "background":"#e8f4ea",
+  "background":"#F5F5F5",
             "transform": [{
               "filter": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Russia'  || datum['CountryName'] == 'Canada' || datum['CountryName'] == 'Japan' ||  datum['CountryName'] == 'United States'||  datum['CountryName'] == 'Germany'||  datum['CountryName'] == 'Saudi Arabia' || datum['CountryName'] == 'Greenland'"
           }
@@ -17,6 +20,7 @@
   "x": {
       "field": "Industrialproductiongrowthrate",
       "type": "quantitative",
+      "title":"Industrial Production Rate",
       "scale": {"padding": 20},
       "axis": {
         "gridColor": {
@@ -31,10 +35,11 @@
         "domain": false,
         "ticks": false,
         "labelAngle": 0,
-        "labelPadding": 4
+        "labelPadding": 4,
+        "title":null
       }
     },
-  "color": {"value": "#382119"}
+  "color": {"value": "#092215"}
 },
 "layer": [
      { "mark": "bar"},

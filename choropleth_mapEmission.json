@@ -1,11 +1,14 @@
-{
+{ "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+"view": {
+   "stroke": "transparent"
+}},
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text":"Global Emission of CO2 - Tons per Person",
     "color":"#092215",
-    "fontSize":18},
+    "fontSize":20},
     "width": "container",
     "height": 500,
-    "background":"#e8f4ea",
+    "background":"#F5F5F5",
     "data": {
       "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/global.topojson",
       "format": {"type": "topojson", "feature": "global.geo"}
@@ -44,7 +47,7 @@
             "scale": {
               "type": "threshold",
               "domain": [1,5,10],
-              "range": ["#ffffcc", "#a1dab4", "#41b6c4", "#225ea8"]
+              "range": ["#FFCC33", " #FF6600", "#A45209", "#533419"]
             }
           },
           "tooltip": [
@@ -52,7 +55,7 @@
             {
               "field": "Emission-perperson",
               "type": "quantitative",
-              "title": "Percent of Total Electricity Generated"
+              "title": "Percent of Total Generated"
             }
           ]
         }

@@ -1,4 +1,8 @@
 {
+  "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+  "view": {
+     "stroke": "transparent"
+  }},
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A simple donut chart with embedded data.",
     "data": {
@@ -16,13 +20,13 @@
     "title":{ "text":"CO2 Emission Contribution",
     "color":"#092215",
     "fontSize": 18},
-    "height":"container",
+    "height":250,
     "width":"container",
-    "background":"#e8f4ea",
+    "background":"#F5F5F5",
     "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {"field": "value", "type": "quantitative"},
-      "color": {"field": "category", "type": "nominal","scale":{"range":["#382119","#ccbe9f","#abc3c9","#9e9cc2","#a17724","#Ae9c45","#decbe3","#6f7498"]}},
+      "color": {"field": "category", "type": "nominal","scale":{"range":["#4477aa","#66ccee","#228833","#ccbb44","#ee6677","#aa3377","#bbbbbb","#332288"]}},
       "order":{"field":"value","type": "quantitative","sort":"ascending"}
     }
   }

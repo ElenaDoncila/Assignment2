@@ -1,11 +1,15 @@
 {
+  "config": {"legend": {"orient":"right","layout":{"bottom":{"anchor":"middle"}}},
+  "view": {
+     "stroke": "transparent"
+  }},
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": "container",
+  "width": "container",
+  "height": 500,
   "title": {"text":"GDP, Population and CO2 Emissions",
   "color":"#092215",
   "fontSize":18},
-    "background":"#e8f4ea",
+    "background":"#F5F5F5",
   "data": {
     "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
   },
