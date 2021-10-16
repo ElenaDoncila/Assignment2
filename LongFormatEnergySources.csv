@@ -1,0 +1,33 @@
+﻿,Fossil,Nuclear,Hydroelectric,OtherRenewable,,,,Country,Energy,Sourced
+Canada,23,9,56,12,,,,Canada,Fossil,23
+China,62,2,18,18,,,,Canada,Nuclear,9
+Germany,41,5,2,52,,,,Canada,Hydroelectric,56
+Greenland,51,0,49,0,,,,Canada,OtherRenewable,12
+Japan,71,1,8,20,,,,China,Fossil,62
+Russia,68,11,21,0,,,,China,Nuclear,2
+Saudi Arabia,100,0,0,0,,,,China,Hydroelectric,18
+United States,70,9,7,14,,,,China,OtherRenewable,18
+,,,,,,,,Germany,Fossil,41
+,,,,,,,,Germany,Nuclear,5
+Canada,Canada,Canada,Canada,,,,,Germany,Hydroelectric,2
+China,China,China,China,,,,,Germany,OtherRenewable,52
+Germany,Germany,Germany,Germany,,,,,Greenland,Fossil,51
+Greenland,Greenland,Greenland,Greenland,,,,,Greenland,Nuclear,0
+Japan,Japan,Japan,Japan,,,,,Greenland,Hydroelectric,49
+Russia,Russia,Russia,Russia,,,,,Greenland,OtherRenewable,0
+Saudi Arabia,Saudi Arabia,Saudi Arabia,Saudi Arabia,,,,,Japan,Fossil,71
+United States,United States,United States,United States,,,,,Japan,Nuclear,1
+,,,,,,,,Japan,Hydroelectric,8
+,,,,,,,,Japan,OtherRenewable,20
+,,,,,,,,Russia,Fossil,68
+,,,,,,,,Russia,Nuclear,11
+,,,,,,,,Russia,Hydroelectric,21
+,,,,,,,,Russia,OtherRenewable,0
+,,,,,,,,Saudi Arabia,Fossil,100
+,,,,,,,,Saudi Arabia,Nuclear,0
+,,,,,,,,Saudi Arabia,Hydroelectric,0
+,,,,,,,,Saudi Arabia,OtherRenewable,0
+,,,,,,,,United States,Fossil,70
+,,,,,,,,United States,Nuclear,9
+,,,,,,,,United States,Hydroelectric,7
+,,,,,,,,United States,OtherRenewable,14
