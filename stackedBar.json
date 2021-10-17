@@ -28,7 +28,7 @@
       "field": "Energy",
       "type": "nominal",
       "scale": {
-        "domain": ["OtherRenewable", "Hydroelectric", "Fossil","Nuclear"],
+        "domain": ["Renewable", "Hydroelectric", "Fossil","Nuclear"],
         "range": ["#1b332d","#3182bd", "#ba0020", "#fc9272"]
       },
       "title": "Source of Energy"
