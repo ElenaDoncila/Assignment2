@@ -1,37 +1,37 @@
 {
-    "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
-    "view": {
-       "stroke": "transparent"
-    }},
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"},
-       "title":{ "text":"Electricity Sources",
-  "color":"#092215",
-  "fontSize": 18},
-    "height":250,
-  "width":"container",
-  "background":"#F5F5F5",
-  "mark": "bar",
-  "encoding": {
-    "y": {
-      "field": "Country",
-      "type": "nominal",
-      "title": null
+  "config": {"legend": {"orient":"bottom","layout":{"bottom":{"anchor":"middle"}}},
+  "view": {
+     "stroke": "transparent"
+  }},
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"data": {"url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"},
+     "title":{ "text":"Electricity Sources",
+"color":"#092215",
+"fontSize": 18},
+  "height":250,
+"width":"container",
+"background":"#F5F5F5",
+"mark": "bar",
+"encoding": {
+  "y": {
+    "field": "Country",
+    "type": "nominal",
+    "title": null
+  },
+  "x": {
+    "field":"Sourced",
+    "title":"Percent Sourced",
+    "type": "quantitative",
+    "sort":"ascending"
+  },
+  "color": {
+    "field": "Energy",
+    "type": "nominal",
+    "scale": {
+      "domain": ["Renewable", "Hydroelectric", "Fossil","Nuclear"],
+      "range": ["#1fc600","#3182bd", "#ba0020", "#fc9272"]
     },
-    "x": {
-      "field":"Sourced",
-      "title":"Percent Sourced",
-      "type": "quantitative",
-      "sort":"ascending"
-    },
-    "color": {
-      "field": "Energy",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Renewable", "Hydroelectric", "Fossil","Nuclear"],
-        "range": ["#1b332d","#3182bd", "#ba0020", "#fc9272"]
-      },
-      "title": "Source of Energy"
-    }
+    "title": "Source of Energy"
   }
+}
 }
