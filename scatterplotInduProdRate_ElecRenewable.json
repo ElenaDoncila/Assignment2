@@ -1,156 +1,156 @@
 {
-  "config": {"legend": {"orient":"right","layout":{"bottom":{"anchor":"middle"}}},
-  "view": {
-     "stroke": "transparent"
-  }},
+  "config": {
+      "legend": { "orient": "right", "layout": { "bottom": { "anchor": "middle" } } },
+      "view": {
+          "stroke": "transparent"
+      }
+  },
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 500,
-  "title": {"text":"GDP, Population and CO2 Emissions",
-  "color":"#092215",
-  "fontSize":18},
-    "background":"#F5F5F5",
+  "title": {
+      "text": "GDP, Population and CO2 Emissions",
+      "color": "#092215",
+      "fontSize": 18
+  },
+  "background": "#F5F5F5",
   "data": {
-    "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
+      "url": "https://raw.githubusercontent.com/ElenaDoncila/Assignment2/main/Country_data.csv"
   },
   "params": [
-    {
-      "name": "Population_Above",
-      "value": 0,
-      "bind": {
-        "input": "range",
-        "min": 0,
-        "max": 100000000,
-        "step": 1000000,
-        "name": "Minimum Population: "
+      {
+          "name": "Population_Above",
+          "value": 0,
+          "bind": {
+              "input": "range",
+              "min": 0,
+              "max": 100000000,
+              "step": 1000000,
+              "name": "Minimum Population: "
+          }
+      },
+      {
+          "name": "Continent_selection",
+          "bind": {
+              "input": "select",
+              "options": [
+                  null,
+                  "North America",
+                  "South America",
+                  "Europe",
+                  "Africa",
+                  "Asia",
+                  "Oceania"
+              ],
+              "labels": [
+                  "Show All",
+                  "North America",
+                  "South America",
+                  "Europe",
+                  "Africa",
+                  "Asia",
+                  "Oceania"
+              ],
+              "name": "Continent Selection: "
+          }
       }
-    },
-    {
-      "name": "Continent_selection",
-      "bind": {
-        "input": "select",
-        "options": [
-          null,
-          "North America",
-          "South America",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
-        "labels": [
-          "Show All",
-          "North America",
-          "South America",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
-        "name": "Continent Selection: "
-      }
-    }
   ],
   "transform": [
-    {"filter": "datum.Population > Population_Above"},
-    {
-      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
-    }
+      { "filter": "datum.Population > Population_Above" },
+      {
+          "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+      }
   ],
   "encoding": {
-    "x": {
-      "field": "Emission-perperson",
-      "type": "quantitative",
-      "title": "Tonnes of Carbon Dioxide Emissions Per Person",
-      "scale": {"type":"linear", "domain":[0,55]},
-      "axis":{"tickColor":null,"labelFontSize":15} 
-    },
-    "y": {
-      "field": "GDP",
-      "type": "quantitative",
-      "title": "GDP - per capita",
-      "scale": {"type":"linear","domain": [1,130000]}
-    }
-  },
-  "layer": [
-    {
-      "selection": {
-        "continent_highlight": {
-          "type": "multi",
-          "fields": ["Continent"],
-          "bind": "legend"
-        }
-      },
-      "mark": "circle",
-      "encoding": {
-        "size": {
-          "field": "Population",
+      "x": {
+          "field": "Emission-perperson",
           "type": "quantitative",
-          "scale": {
-            "type": "threshold",
-            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
-            "range": [10, 50, 150, 200, 300, 400]
-          },
-          "legend": {"format": ".1s"}
-        },
-        "color": {
-          "field": "Continent",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "North America",
-              "South America",
-              "Europe",
-              "Africa",
-              "Asia",
-              "Oceania"
-            ],
-            "range": [
-              "#e41a1c",
-              "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
-              "#377eb8",
-              "#a65628"
-            ]
-          }
-        },
-        "opacity": {
-          "condition": {"selection": "continent_highlight", "value": 0.6},
-          "value": 0.2
-        },
-        "tooltip":[
-              {"field":"CountryName","type":"nominal"},
-              {"field":"Emission-perperson","type": "quantitative", "format":","},
-              {"field":"GDP","type": "quantitative","format":","}
-            ]
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -12,
-        "fontSize": 11.5,
-        "fontStyle": "italic"
+          "title": "Tonnes of Carbon Dioxide Emissions Per Person",
+          "scale": { "type": "linear", "domain": [0, 55] },
+          "axis": { "tickColor": null, "labelFontSize": 15 }
       },
-      "encoding": {
-        "text": {"field": "CountryName", "type": "nominal"},
-        "color": {"value": "black"},
-        "opacity": {
-          "condition": {
-            "test": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Australia' || datum['CountryName'] == 'United Kingdom' || datum['CountryName'] == 'Russia' || datum['CountryName'] == 'India' || datum['CountryName'] == 'Brazil' ||  datum['CountryName'] == 'United States'||  datum['CountryName'] == 'South Africa'||  datum['CountryName'] == 'Chile'||  datum['CountryName'] == 'Qatar'",
-            "value": 1
-          },
-          "value": 0
-        },
-        "tooltip":[
-    {"field":"CountryName","type":"nominal"},
-    {"field":"Emission-perperson","type": "quantitative", "format":","},
-    {"field":"GDP","type": "quantitative","format":","}
-  ]
+      "y": {
+          "field": "GDP",
+          "type": "quantitative",
+          "title": "GDP - per capita",
+          "scale": { "type": "linear", "domain": [1, 130000] }
       }
-    }
+  },
+  "layer": [{
+      "params": [
+          {
+          "name": "grid",
+          "select": "interval",
+          "bind": "scales"
+      }
+      ],
+          
+          "mark": "circle",
+          "encoding": {
+              "size": {
+                  "field": "Population",
+                  "type": "quantitative",
+                  "scale": {
+                      "type": "threshold",
+                      "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+                      "range": [10, 50, 150, 200, 300, 400]
+                  },
+                  "legend": { "format": ".1s" }
+              },
+              "color": {
+                  "field": "Continent",
+                  "type": "nominal",
+                  "scale": {
+                      "domain": [
+                          "North America",
+                          "South America",
+                          "Europe",
+                          "Africa",
+                          "Asia",
+                          "Oceania"
+                      ],
+                      "range": [
+                          "#e41a1c",
+                          "#984ea3",
+                          "#ff7f00",
+                          "#a6cee3",
+                          "#377eb8",
+                          "#a65628"
+                      ]
+                  }
+              },
+              "tooltip": [
+                  { "field": "CountryName", "type": "nominal" },
+                  { "field": "Emission-perperson", "type": "quantitative", "format": "," },
+                  { "field": "GDP", "type": "quantitative", "format": "," }
+              ]
+          }
+      },
+      {
+          "mark": {
+              "type": "text",
+              "align": "right",
+              "baseline": "middle",
+              "dx": -12,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+          },
+          "encoding": {
+              "text": { "field": "CountryName", "type": "nominal" },
+              "color": { "value": "black" },
+              "opacity": {
+                  "condition": {
+                      "test": "datum['CountryName'] == 'China' || datum['CountryName'] == 'Australia' || datum['CountryName'] == 'United Kingdom' || datum['CountryName'] == 'Russia' || datum['CountryName'] == 'India' || datum['CountryName'] == 'Brazil' ||  datum['CountryName'] == 'United States'||  datum['CountryName'] == 'South Africa'||  datum['CountryName'] == 'Chile'||  datum['CountryName'] == 'Qatar'",
+                      "value": 1
+                  },
+                  "value": 0
+              },
+              "tooltip": [
+                  { "field": "CountryName", "type": "nominal" },
+                  { "field": "Emission-perperson", "type": "quantitative", "format": "," },
+                  { "field": "GDP", "type": "quantitative", "format": "," }
+              ]
+          }
+      }
   ]
 }
