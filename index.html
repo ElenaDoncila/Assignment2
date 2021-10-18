@@ -76,6 +76,11 @@
                 </div>
             </div>
             <p class="bodytext" style="text-align: center; font-size: 15px; opacity: 0.5; ">* Data is not available for countries in grey.</p>
+            <div class="column-list">
+              <div class="column; annotation" style="width:26%; text-align: center;"><p class="annotation">Energy production of all types accounts for 72% of all emissions.</p></div>
+              <div class="column; annotation" style="width:26%;text-align: center; padding-top: 1.5%;"><p class="annotation">Saudi Arabia, Oman and Libya rely fully on fossil fuels.</p></div>
+              <div class="column; annotation" style="width:26%;text-align: center;"><p class="annotation">Norway, Sweden, Zambia and Malawi use fossil fuels for less than 5% of their energy.</p></div>
+            </div>
             <p class="finaltext">Globaly, fossil fuel contributes to over <strong>60% of global electricity generation</strong>. This number has significantly dropped from the beginning of the century by around 20%. According to some sources, it is estimated that <strong> oil reserves will run out in 47 years, natural gas in 52 years and coal in 133 years.</strong></p>
           
         <hr>
@@ -90,6 +95,11 @@
             </div>
         </div>
         <p class="bodytext" style="text-align: left; font-size: 15px; opacity: 0.5;">* Data is not available for countries in grey.</p>
+        <div class="column-list">
+          <div class="column; annotation" style="width:26%; text-align: center;"><p class="annotation">Most African countries emit less than 1 ton per person.</p></div>
+          <div class="column; annotation" style="width:26%;text-align: center; "><p class="annotation">Most Western countries emit roughly 19 tons per person.</p></div>
+          <div class="column; annotation" style="width:26%;text-align: center;"><p class="annotation">The highest emission per person is Qatar with roughly 49 tons.</p></div>
+        </div>
         <p class="finaltext"> <strong>The choropleth map indicates that although some regions of the world rely most on fossil fuels for their energy production, they are not as likely to also have the highest rates of CO2 emissions.</strong> What are the drivers of high rates of CO2 emissions around the world? Is there a relationship between the overall wealth of a country and it's emissions?</p>
        
         <hr>
@@ -100,6 +110,8 @@
                 <p class="bodytext">The adjacent scatterplot considers, the region of the world, population, GDP and the tonnes of CO2 emissions per person.</p>
                 <p class="bodytext">Interestingly, there seems to be an upward trend between the GDP of a country and the relative amount of CO2 per person emmited. <strong>Despite potential expectations, population does not seem to be a big driver of emissions as the most populated countries such as India and China are not prominent features.</strong></p>
                 <p class="bodytext"> Please use the Continent Selection as well as the Population slider to see how different countries plot on the chart.</p>
+                <p class="bodytext"> Note that the GDP is expressed in USD.</p>
+                <p class="annotation" style="padding: 10px;">Why do really wealthy countries have such high emissions?</p>
             </div>
             <div id="vis5"  class="column" style="width:70%"></div>
         </div>
@@ -115,9 +127,14 @@
             </div>
     </div>
     <div class="column-list"> 
-      <p class="bodytext; column" style="width: 30%; text-align: center; font-family: 'Century Gothic'"><strong>Out of all the top contributors to CO2 emissions, only Canada and Germany do not rely in majority on fossil fuels.</strong> The most widely used source of renewable energy appears to be hydroelectric with the least being nuclear. Although Saudi Arabia's source of electricity generation is exclusively fossil fuel, it has been ranked 6th in the world for its solar energy potential and in 2012 pledged to receive a third of its energy demands from solar power by 2032.It has also announced investment in 17 nuclear power plants within the next 20 years.</p>
-      <p class="bodytext; column" style="width: 30%; text-align: center; font-family: 'Century Gothic'"></strong>Industrial production refers to the output of industrial establishments and covers sectors such as mining, manufacturing, utilities and construction. <strong>In 2019, over 6,500 Million Metric Tons of CO2 were emmitted from industrial process in the US alone.</strong> Interestingly, although Saudi Arabia and Russia are the largest contributors to CO2 emissions they cannot attribute this to industrial processes. Canada - although a large contributor to CO2 emissions relies more on Hydroelectric power than fossil fuels as a source of energy and has the second highest production rate.  </p>
-      <p class="bodytext; column" style="width: 30%; text-align: center; font-family: 'Century Gothic'"><strong>China contributes over a third of all CO2 emmissions globally.</strong>The remaining 7 countries collectively contribute a second third. China's overwhelming level of emissions can be attributed to it's construction-related activities which are among the main sources of CO2 emissions. China's extraordinary urbanization boom has intesified these activities. The production of cement and steel, which have undergirded China's infrastructure development, both emit a large amount of CO2 during the refining process.</p>
+      <p class="bodytext; column" style="width: 33%; text-align: center; font-family: 'Century Gothic'; padding: 10px;"><strong>Out of all the top contributors to CO2 emissions, only Canada and Germany do not rely in majority on fossil fuels.</strong> The most widely used source of renewable energy appears to be hydroelectric with the least being nuclear. Although Saudi Arabia's source of electricity generation is exclusively fossil fuel, it has been ranked 6th in the world for its solar energy potential and in 2012 pledged to receive a third of its energy demands from solar power by 2032.It has also announced investment in 17 nuclear power plants within the next 20 years.</p>
+      <p class="bodytext; column" style="width: 33%; text-align: center; font-family: 'Century Gothic';padding: 10px;"></strong>Industrial production refers to the output of industrial establishments and covers sectors such as mining, manufacturing, utilities and construction and is represented here as a percent for the year of 2019 (growth or decrease from 2018.). <strong>In 2019, over 6,500 Million Metric Tons of CO2 were emmitted from industrial process in the US alone.</strong> Interestingly, although Saudi Arabia and Russia are the largest contributors to CO2 emissions they cannot attribute this to industrial processes. Canada - although a large contributor to CO2 emissions relies more on Hydroelectric power than fossil fuels as a source of energy and has the second highest production rate.  </p>
+      <p class="bodytext; column" style="width: 33%; text-align: center; font-family: 'Century Gothic';padding: 10px;"><strong>China contributes over a third of all CO2 emmissions globally.</strong>The remaining 7 countries collectively contribute a second third. China's overwhelming level of emissions can be attributed to it's construction-related activities which are among the main sources of CO2 emissions. China's extraordinary urbanization boom has intesified these activities. The production of cement and steel, which have undergirded China's infrastructure development, both emit a large amount of CO2 during the refining process.</p>
+    </div>
+    <div class="column-list">
+      <div class="column; annotation" style="width:26%; text-align: center;"><p class="annotation">Despite being environmentally friendly, nuclear power is minimally used.</p></div>
+      <div class="column; annotation" style="width:26%;text-align: center; "><p class="annotation">Industry does not appear to be a prominent contributor to emissions.</p></div>
+      <div class="column; annotation" style="width:26%;text-align: center;"><p class="annotation">8 countries are responsible for two thirds of global emissions.</p></div>
     </div>
     <p class="finaltext">It seems that industrial processes are not a driver for high emissions amongst the top 8 countries which produce emissions as a number of countries with high emissions have negative industrial growth. <strong> The top 8 countries with the highest emissions contribute roughly two thirds of total global emissions, with China contributing a third on its own.</strong> A further exploration could consider to what degree the day to day habits of citizens affects emissions.</p>
        
@@ -127,9 +144,10 @@
             <div id="vis7"  class="column" style="width:70%"></div>
             <div style="width:30%" class="column">
             <h3 class="quote_text">“[I predict] the electricity generated by water power is the only thing that is going to keep future generations from freezing.That time is not in the very distant future.” — Charles Proteus Steinmetz</h3>
-            <p class="bodytext"><strong>Renewable energy sources include biomass, hydropowerm geothermal, wind and solar.</strong> AS the source for energy is natural and constantly replaced, renewable sources of energy never run out. Transitioning electricity systems to deal with an increasing share of renewable sources is a global concern touted as a solution to the challenge of climate change. 
+            <p class="bodytext"><strong>Renewable energy sources include biomass, hydropower, geothermal, wind and solar.</strong> AS the source for energy is natural and constantly replaced, renewable sources of energy never run out. Transitioning electricity systems to deal with an increasing share of renewable sources is a global concern touted as a solution to the challenge of climate change. 
             </p>
-            <p class="bodytext"><strong>Many challenges persist in the implementation of renewable sources such as environmental impacts, meeting peak demand reliably, and expenses.</strong> Despite this, research into these technologies is intensive.</p>  
+            <p class="bodytext"><strong>Many challenges persist in the implementation of renewable sources such as environmental impacts, meeting peak demand reliably, and expenses.</strong> Despite this, research into these technologies is intensive.</p> 
+            <p class="annotation" style="padding: 10px;">Norway, Sweden, Ethiopia, Zambia and Nepal lead the world in renewable energy.</p> 
           </div>
 </div>
 <p style="text-align: left; font-size: 15px; opacity: 0.5; font-family: 'Century Gothic';">* Data is not available for countries in grey.</p>

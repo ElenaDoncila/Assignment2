@@ -118,6 +118,14 @@ img {
     background-color:  #F5F5F5;
 }
 
+.annotation {
+    font-family: 'Century Gothic', sans-serif;
+    color: #e0f0e3;
+    background: #334737;
+    padding: 7px;
+    font-size: 22px;
+    text-align: center;
+}
 
 .quote_text {
     font-family: 'Spectral', serif;
