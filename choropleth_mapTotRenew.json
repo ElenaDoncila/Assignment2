@@ -42,7 +42,7 @@
         "encoding": {
           "color": {
             "field": "TotalRenewableElectricity",
-            "title": "Global % of Electricity Sourced From Renewable Sources",
+            "title": "Percent per country",
             "type": "quantitative",
             "scale": {
               "type": "threshold",

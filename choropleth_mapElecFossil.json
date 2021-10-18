@@ -4,7 +4,7 @@
      "stroke": "transparent"
   }},
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text":"Global Use of Electricty Sourced from Fossil Fuels",
+  "title": {"text":"Global Use of Electricity Sourced from Fossil Fuels",
   "color":"#092215",
   "fontSize":20},
   "width": "container",
@@ -43,7 +43,7 @@
       "encoding": {
         "color": {
           "field": "Electricity-fromfossilfuels",
-          "title": "Global % of Electricity Sourced From Fossil Fuels",
+          "title": "Percent per country",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
